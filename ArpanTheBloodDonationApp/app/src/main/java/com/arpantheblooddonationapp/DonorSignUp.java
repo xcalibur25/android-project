@@ -86,13 +86,40 @@ public class DonorSignUp extends AppCompatActivity implements LoaderCallbacks<Cu
         gender.add("Female");
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, gender);
+        ArrayAdapter<String> genderDataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, gender);
 
         // Drop down layout style - list view with radio button
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        genderDataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // attaching data adapter to spinner
-        genderSpinner.setAdapter(dataAdapter);
+        genderSpinner.setAdapter(genderDataAdapter);
+
+        // Spinner element
+        Spinner bloodGroupSpinner = (Spinner) findViewById(R.id.bloodGroupSpinner);
+
+        // Spinner click listener
+        bloodGroupSpinner.setOnItemSelectedListener( this);
+
+        // Spinner Drop down elements
+        List<String> bloodGroup = new ArrayList<String>();
+        bloodGroup.add("A+");
+        bloodGroup.add("A-");
+        bloodGroup.add("B+");
+        bloodGroup.add("B-");
+        bloodGroup.add("AB+");
+        bloodGroup.add("AB-");
+        bloodGroup.add("O+");
+        bloodGroup.add("O-");
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> bloodDonorDataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, bloodGroup);
+
+        // Drop down layout style - list view with radio button
+        bloodDonorDataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        bloodGroupSpinner.setAdapter(bloodDonorDataAdapter);
+
         mEmailView = (AutoCompleteTextView) findViewById(R.id.name);
         populateAutoComplete();
 
