@@ -33,8 +33,8 @@
         android:layout_marginBottom="20dp"
         android:onClick="requestBlood"
         android:text="Request Blood"
-        tools:layout_width="match_parent"
-        tools:textSize="24sp" />
+        android:textSize="24sp"
+        tools:layout_width="match_parent" />
 
     <Button
         android:id="@+id/donateBlood"

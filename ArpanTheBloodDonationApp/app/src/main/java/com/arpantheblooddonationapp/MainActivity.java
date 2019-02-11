@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void requestBlood(View view){
         Button requestBlood = (Button)findViewById(R.id.requestBlood);
+        Intent requestIntent = new Intent(MainActivity.this, RequestBlood.class);
+        startActivity(requestIntent);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
