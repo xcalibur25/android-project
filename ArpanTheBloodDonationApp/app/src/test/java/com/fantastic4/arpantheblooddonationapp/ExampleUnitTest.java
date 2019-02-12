@@ -1,4 +1,4 @@
-package com.arpantheblooddonationapp;
+package com.fantastic4.arpantheblooddonationapp;
 
 import org.junit.Test;
 

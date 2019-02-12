@@ -1,5 +1,4 @@
-package com.arpantheblooddonationapp;
-
+package com.fantastic4.arpantheblooddonationapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -13,7 +12,6 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,19 +20,25 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.fantastic4.arpantheblooddonationapp.R;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class RequestBlood extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class DonorSignUp extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     LocationManager locationManager;
 
     LocationListener locationListener;
 
-    public void locate(View view){
-        locationManager = (LocationManager) RequestBlood.this.getSystemService(Context.LOCATION_SERVICE);
+    public void registerDonor(View view){
+
+    }
+
+    public void locate(View view) {
+        locationManager = (LocationManager) DonorSignUp.this.getSystemService(Context.LOCATION_SERVICE);
 
         locationListener = new LocationListener() {
             @Override
@@ -66,31 +70,28 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
 
         } else {*/
 
-            if (ContextCompat.checkSelfPermission(RequestBlood.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(DonorSignUp.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
-                ActivityCompat.requestPermissions(RequestBlood.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            ActivityCompat.requestPermissions(DonorSignUp.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
-            } else {
+        } else {
 
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
 
-                Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
-                if (location != null) {
+            if (location != null) {
 
-                    updateLocationInfo(location);
-
-                }
+                updateLocationInfo(location);
 
             }
 
         }
 
+    }
 
 
-   // }
-
-
+    // }
 
 
     public void startListening() {
@@ -108,7 +109,6 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
         Log.i("LocationInfo", location.toString());
 
 
-
         Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
 
         try {
@@ -117,7 +117,7 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
 
             List<Address> listAddresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
 
-            if (listAddresses != null && listAddresses.size() > 0 ) {
+            if (listAddresses != null && listAddresses.size() > 0) {
 
                 Log.i("PlaceInfo", listAddresses.get(0).toString());
 
@@ -178,25 +178,19 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
             startListening();
 
         }
-
-        /*if (requestCode == REQUEST_READ_CONTACTS) {
-            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                populateAutoComplete();
-            }
-        }*/
     }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_request_blood);
+        setContentView(R.layout.activity_donor_sign_up);
 
         // Spinner element
         Spinner genderSpinner = (Spinner) findViewById(R.id.genderSpinner);
 
         // Spinner click listener
-        genderSpinner.setOnItemSelectedListener( this);
+        genderSpinner.setOnItemSelectedListener(this);
 
         // Spinner Drop down elements
         List<String> gender = new ArrayList<String>();
@@ -240,12 +234,14 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
+    public void onNothingSelected(AdapterView<?> parent) {
 
     }
 }
+
+

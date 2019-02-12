@@ -1,35 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.arpantheblooddonationapp">
+    package="com.fantastic4.arpantheblooddonationapp">
     <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <dist:module dist:instant="true" />
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Request Blood"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".RequestBlood"></activity>
+        <activity android:name=".DonorSignUp" />
         <activity
-            android:name=".DonorSignUp"
-            android:label="Sign Up" />
-        <activity
-            android:name=".DonorLoginActivity"
-            android:label="Log In" />
-        <activity
-            android:name=".MainActivity"
-            android:label="Arpan: The Blood Donation App"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".DonorLogin"
+            android:label="@string/title_activity_donor_login" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

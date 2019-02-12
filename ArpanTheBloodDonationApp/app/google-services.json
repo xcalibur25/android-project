@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "168035168569",
-    "firebase_url": "https://arpantheblooddonationapp.firebaseio.com",
-    "project_id": "arpantheblooddonationapp",
-    "storage_bucket": "arpantheblooddonationapp.appspot.com"
+    "project_number": "1049795948367",
+    "firebase_url": "https://arpantheblooddonationapp-c6e80.firebaseio.com",
+    "project_id": "arpantheblooddonationapp-c6e80",
+    "storage_bucket": "arpantheblooddonationapp-c6e80.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:168035168569:android:8b265e4684488f6b",
+        "mobilesdk_app_id": "1:1049795948367:android:a1679ed102792a21",
         "android_client_info": {
-          "package_name": "com.arpantheblooddonationapp"
+          "package_name": "com.fantastic4.arpantheblooddonationapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "168035168569-dtmmapuoujje4c70j0o5as54nk61561p.apps.googleusercontent.com",
+          "client_id": "1049795948367-u7bj52bbb0c0i8723dgf8amf8ojpfmto.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.arpantheblooddonationapp",
+            "package_name": "com.fantastic4.arpantheblooddonationapp",
             "certificate_hash": "23b05382d11a8f421638a793048a973e57fdaa04"
           }
         },
         {
-          "client_id": "168035168569-2c3rk08ilgpqekuj06te0qqgl65v5ap0.apps.googleusercontent.com",
+          "client_id": "1049795948367-enn9dta486obqu64ve87sjc38r1ijgam.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAvlD90CzImmlKRBzLBsiCmYOLXWYi4qlc"
+          "current_key": "AIzaSyDWhMPL_qd1stNkrQiuWqANeMAC7lsPUa8"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "168035168569-2c3rk08ilgpqekuj06te0qqgl65v5ap0.apps.googleusercontent.com",
+              "client_id": "1049795948367-enn9dta486obqu64ve87sjc38r1ijgam.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

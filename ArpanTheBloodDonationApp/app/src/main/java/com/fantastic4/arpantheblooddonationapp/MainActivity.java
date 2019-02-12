@@ -1,10 +1,10 @@
-package com.arpantheblooddonationapp;
+package com.fantastic4.arpantheblooddonationapp;
 
+import android.content.Intent;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.fantastic4.arpantheblooddonationapp.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     public  void donateBlood(View view){
         Button donateBlood = (Button)findViewById(R.id.donateBlood);
-        Intent donorIntent = new Intent(MainActivity.this, DonorLoginActivity.class);
+        Intent donorIntent = new Intent(MainActivity.this, DonorLogin.class);
         startActivity(donorIntent);
     }
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -56,5 +56,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }

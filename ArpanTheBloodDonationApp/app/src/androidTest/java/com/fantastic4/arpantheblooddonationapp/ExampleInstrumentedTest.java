@@ -1,7 +1,6 @@
-package com.arpantheblooddonationapp;
+package com.fantastic4.arpantheblooddonationapp;
 
 import android.content.Context;
-
 import androidx.test.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
 
@@ -22,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.arpantheblooddonationapp", appContext.getPackageName());
+        assertEquals("com.fantastic4.arpantheblooddonationapp", appContext.getPackageName());
     }
 }
