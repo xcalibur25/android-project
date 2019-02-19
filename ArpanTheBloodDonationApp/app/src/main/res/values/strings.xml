@@ -13,4 +13,6 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="request_blood">Request Blood</string>
+    <string name="donate_blood">Donate Blood</string>
 </resources>

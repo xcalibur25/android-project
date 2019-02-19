@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "1049795948367-jaec6d7p056480bh34grf6mkipr48bgi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fantastic4.arpantheblooddonationapp",
+            "certificate_hash": "a6cf535506fe2986512322c0f8e95524401928b3"
+          }
+        },
+        {
           "client_id": "1049795948367-enn9dta486obqu64ve87sjc38r1ijgam.apps.googleusercontent.com",
           "client_type": 3
         }

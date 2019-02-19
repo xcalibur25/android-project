@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fantastic4.arpantheblooddonationapp.RequestBlood">
+    tools:context="com.fantastic4.arpantheblooddonationapp.RequestBlood"
+    tools:ignore="MissingDefaultResource">
 
     <ScrollView
         android:layout_width="match_parent"

@@ -13,6 +13,7 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,11 +35,11 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
 
     LocationListener locationListener;
 
-    public void requestBlood(View view){
+    public void requestBlood(View view) {
 
     }
 
-    public void locate(View view){
+    public void locate(View view) {
         locationManager = (LocationManager) RequestBlood.this.getSystemService(Context.LOCATION_SERVICE);
 
         locationListener = new LocationListener() {
@@ -65,37 +66,34 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
             }
         };
 
-        /*if (Build.VERSION.SDK_INT < 23) {
+        if (Build.VERSION.SDK_INT < 23) {
 
             startListening();
 
-        } else {*/
-
-        if (ContextCompat.checkSelfPermission(RequestBlood.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(RequestBlood.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-
         } else {
 
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
+            if (ContextCompat.checkSelfPermission(RequestBlood.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
-            Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                ActivityCompat.requestPermissions(RequestBlood.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
-            if (location != null) {
+            } else {
 
-                updateLocationInfo(location);
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
+
+                Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+                if (location != null) {
+
+                    updateLocationInfo(location);
+
+                }
 
             }
 
         }
 
+
     }
-
-
-
-    // }
-
-
 
 
     public void startListening() {
@@ -113,7 +111,6 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
         Log.i("LocationInfo", location.toString());
 
 
-
         Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
 
         try {
@@ -122,7 +119,7 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
 
             List<Address> listAddresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
 
-            if (listAddresses != null && listAddresses.size() > 0 ) {
+            if (listAddresses != null && listAddresses.size() > 0) {
 
                 Log.i("PlaceInfo", listAddresses.get(0).toString());
 
@@ -201,7 +198,7 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
         Spinner genderSpinner = (Spinner) findViewById(R.id.genderSpinner);
 
         // Spinner click listener
-        genderSpinner.setOnItemSelectedListener( this);
+        genderSpinner.setOnItemSelectedListener(this);
 
         // Spinner Drop down elements
         List<String> gender = new ArrayList<String>();
@@ -221,7 +218,7 @@ public class RequestBlood extends AppCompatActivity implements AdapterView.OnIte
         Spinner bloodGroupSpinner = (Spinner) findViewById(R.id.bloodGroupSpinner);
 
         // Spinner click listener
-        bloodGroupSpinner.setOnItemSelectedListener( this);
+        bloodGroupSpinner.setOnItemSelectedListener(this);
 
         // Spinner Drop down elements
         List<String> bloodGroup = new ArrayList<String>();
