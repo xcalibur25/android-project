@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "582133291023",
+    "firebase_url": "https://blood-bank-2249e.firebaseio.com",
+    "project_id": "blood-bank-2249e",
+    "storage_bucket": "blood-bank-2249e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582133291023:android:80a49d7fead3ebbc",
+        "android_client_info": {
+          "package_name": "com.bikash.bloodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582133291023-1ldi64egrgj3quaahtcl0iihvkamq7ci.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bikash.bloodbank",
+            "certificate_hash": "23b05382d11a8f421638a793048a973e57fdaa04"
+          }
+        },
+        {
+          "client_id": "582133291023-mt1foc1vc4ptcnkn3rvfhlqjdh3c6sbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpc6-BDWWmdRnM-u8eYtLpbFyaULBecc8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582133291023-mt1foc1vc4ptcnkn3rvfhlqjdh3c6sbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

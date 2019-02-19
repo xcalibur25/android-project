@@ -118,11 +118,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <MultiAutoCompleteTextView
+                <TextView
                     android:id="@+id/addressTextView"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Address" />
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="address"
+                    android:textSize="18sp" />
 
                 <Button
                     android:id="@+id/locate"
@@ -131,6 +134,7 @@
                     android:layout_weight="1"
                     android:onClick="locate"
                     android:text="Locate" />
+
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout

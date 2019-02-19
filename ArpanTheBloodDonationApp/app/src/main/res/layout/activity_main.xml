@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.fantastic4.arpantheblooddonationapp.MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryDark"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
 
     <Button
         android:id="@+id/requestBlood"
@@ -52,5 +39,13 @@
         android:textSize="24sp"
         tools:layout_width="match_parent" />
 
+    <Button
+        android:id="@+id/yash_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="353dp"
+        android:onClick="printConsole"
+        android:text="Button" />
 
 </RelativeLayout>
